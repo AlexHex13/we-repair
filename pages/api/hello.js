@@ -1,5 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-export default (req, res) => {
-  res.status(200).json({ name: 'John Doe' })
+export default async () => {
+  const res = await fetch('https://jsonplaceholder.typicode.com/users/1')
+  const data =  res.json()
+  console.log(data)
 }
